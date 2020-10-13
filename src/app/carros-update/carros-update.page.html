@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Atualizar Dados do Veículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formGroup">
+
+  <ion-item>
+    <ion-label position="floating">Modelo</ion-label>
+    <ion-input type="text" formControlName="modelo"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Marca</ion-label>
+    <ion-input type="text" formControlName="marca"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cor</ion-label>
+    <ion-input type="text" formControlName="cor"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Combustível</ion-label>
+    <ion-input type="text" formControlName="combustivel"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Ano</ion-label>
+    <ion-input type="text" formControlName="ano"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Preço</ion-label>
+    <ion-input type="text" formControlName="preco"></ion-input>    
+  </ion-item>
+
+  <ion-button (click)="atualizar()" expand="full">Atualizar</ion-button>
+
+  </form>
+</ion-content>

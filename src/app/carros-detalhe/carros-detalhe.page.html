@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dados do Veículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <IMG [src]="imagem" *ngIf="imagem" width="100%">
+  <ion-button expand="block" (click)="foto()" color="danger">Mudar Foto</ion-button>
+  <form>
+
+    <ion-item>
+      <ion-label position="floating">Modelo</ion-label>
+      <ion-input type="text" value="{{carro.modelo}}" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input type="text" value="{{carro.marca}}" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cor</ion-label>
+      <ion-input type="text" value="{{carro.cor}}" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Combustível</ion-label>
+      <ion-input type="text" value="{{carro.combustivel}}" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ano</ion-label>
+      <ion-input type="text" value="{{carro.ano}}" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Preço</ion-label>
+      <ion-input type="text" value="{{carro.preco}}" disabled="true"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="excluir(carro)" color="danger">Excluir</ion-button>
+    <ion-button expand="block" (click)="atualizar(carro)" color="primary">Atualizar</ion-button>
+
+  </form>
+</ion-content>

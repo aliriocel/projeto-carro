@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Carros A Venda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+<ion-list-header lines="inset" color="secondary">
+  <ion-label>Recentes </ion-label>
+  
+  <ion-button  (click)="ionViewWillEnter()" >Atualizar</ion-button>
+  
+</ion-list-header>
+
+
+<ion-item lines="none" *ngFor="let c of carros" (click)="detalhe(c)">
+  <ion-thumbnail slot="start">
+    <img src='https://as1.ftcdn.net/jpg/02/44/86/32/500_F_244863211_hOmFjwcm5ZzNFh6ogWzj3dIGtsxoCUkk.jpg'>
+  </ion-thumbnail>
+  <ion-label>
+      <h3>{{c.modelo}}</h3>
+      <P>{{c.ano}}</P>
+      <p>{{c.preco}}</p> 
+  </ion-label>
+</ion-item>
+
+</ion-list>
+</ion-content>
